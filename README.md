@@ -62,7 +62,7 @@ if (isset($_REQUEST['input'])) {
 <a href="#">3 задание</a><br>
 <
 	if (empty($_GET)) {
-?>
+>
 	<form action="" method="GET">
 		<input name="test1">
 		<input type="submit">
@@ -223,22 +223,22 @@ echo preg_replace('#ab+a#', '-', 'aa aba abba abbba abca abea');
 ?>
 <br>
 <a href="#">19 задание</a><br>
-<?php
+<
 echo preg_replace('#2\+*3#', 'тут', '23 2+3 2++3 2+++3 445 677');
 ?>
 <br>
 <a href="#">20 задание</a><br>
-<?php
+<
 echo preg_replace('#\*q+\+#', 'тут', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
 ?>
 <br>
 <a href="#">21 задание</a><br>
-<?php
+<
 echo preg_replace('#\*q*\+#', 'здесь', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
 ?>
 <br>
 <a href="#">22 задание</a><br>
-<?php
+<
 echo preg_replace('#a.+?a#', '+', 'aba accca azzza wwwwa');
 ?>
 
