@@ -43,7 +43,7 @@ if (isset($_REQUEST['city'])) {
     <input type="text" name="city" placeholder="Введите город">
     <input type="submit">
 </form>
-<br>
+
 
 <a href="#">2 задание</a><br>
 
@@ -58,7 +58,7 @@ if (isset($_REQUEST['input'])) {
     <input type="submit">
 </form>
 
-<br>
+
 <a href="#">3 задание</a><br>
 <
 	if (empty($_GET)) {
@@ -174,7 +174,7 @@ if (isset($_REQUEST['name']) and isset($_REQUEST['message'])) {
 </form>
 <br>
 <a href="#">10 задание</a><br>
-<?php
+<
 echo preg_replace('#a.b#', 'a-b', 'ahb acb aeb aeeb adcb axeb');
 ?>
 <br>
