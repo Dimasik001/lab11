@@ -79,7 +79,7 @@ if (isset($_REQUEST['input'])) {
 
 
 
-<br>
+
 <a href="#">4 задание</a><br>
 <
 if (isset($_REQUEST['name'])) {
@@ -123,7 +123,7 @@ if (!isset($_REQUEST['age'])):
     </form>
 <?php endif; ?>
 
-<br>
+
 <a href="#">7 задание</a><br>
 <
 $loginFile = 'dimas';
