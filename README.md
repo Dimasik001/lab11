@@ -33,12 +33,12 @@
 
     <br>
 <a href="#">1 задание</a><br>
-<?php
+<
 if (isset($_REQUEST['city'])) {
     $city = $_REQUEST['city'];
     echo 'Ваш город, ' . $city;
 }
-?>
+>
 <form action="" method="get">
     <input type="text" name="city" placeholder="Введите город">
     <input type="submit">
@@ -47,12 +47,12 @@ if (isset($_REQUEST['city'])) {
 
 <a href="#">2 задание</a><br>
 
-<?php
+<
 if (isset($_REQUEST['input'])) {
     $input = $_POST['input'];
     $clean_input = strip_tags($input);
 }
-?>
+>
 <form action="" method="get">
     <input type="text" name="city" >
     <input type="submit">
@@ -60,14 +60,14 @@ if (isset($_REQUEST['input'])) {
 
 <br>
 <a href="#">3 задание</a><br>
-<?php
+<
 	if (empty($_GET)) {
 ?>
 	<form action="" method="GET">
 		<input name="test1">
 		<input type="submit">
 	</form>
-<?php
+<
 	} else {
         ?>
 		<form action="" method="GET">
@@ -81,7 +81,7 @@ if (isset($_REQUEST['input'])) {
 
 <br>
 <a href="#">4 задание</a><br>
-<?php
+<
 if (isset($_REQUEST['name'])) {
     $name = $_REQUEST['name'];
     echo 'Привет, ' . $name;
@@ -93,7 +93,7 @@ if (isset($_REQUEST['name'])) {
 </form>
 <br>
 <a href="#">5 задание</a><br>
-<?php
+<
 if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
     $name = strip_tags($_REQUEST['name']);
     $age = strip_tags($_REQUEST['age']);
@@ -109,7 +109,7 @@ if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['te
 </form>
 <br>
 <a href="#">6 задание</a><br>
-<?php
+<
 if (isset($_REQUEST['age'])) {
     $age = $_REQUEST['age'];
     echo $age;
@@ -125,7 +125,7 @@ if (!isset($_REQUEST['age'])):
 
 <br>
 <a href="#">7 задание</a><br>
-<?php
+<
 $loginFile = 'dimas';
 $passwordFile = 1928;
 if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
@@ -145,7 +145,7 @@ if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
 </form>
 <br>
 <a href="#">8 задание</a><br>
-<?php
+<
 $name = '';
 if (isset($_REQUEST['name'])) {
     $name = $_REQUEST['name'];
@@ -158,7 +158,7 @@ if (isset($_REQUEST['name'])) {
 </form>
 <br>
 <a href="#">9 задание</a><br>
-<?php
+<
 $message = '';
 $name = '';
 if (isset($_REQUEST['name']) and isset($_REQUEST['message'])) {
@@ -179,46 +179,46 @@ echo preg_replace('#a.b#', 'a-b', 'ahb acb aeb aeeb adcb axeb');
 ?>
 <br>
 <a href="#">11 задание</a><br>
-<?php
+<
 echo preg_replace('#a..a#', 'a--a', 'aba aca aea abba adca abea');
 ?>
 <br>
 <a href="#">12 задание</a><br>
-<?php
+<
 echo preg_replace('#ab.a#', '+', 'aba aca aea abba adca abea') ; 
 ?>
 <br>
-<?php
+<
 echo preg_replace('#ab+a#', '-', 'aa aba abba abbba abca abea');
 ?>
 <br>
 <a href="#">13 задание</a><br>
-<?php
+<
  echo preg_replace('#ab*a#', '-', 'aa aba abba abbba abca abea');
 ?>
 <br>
 <a href="#">14 задание</a><br>
-<?php
+<
  echo preg_replace('#ab?a#', '+', 'aa aba abba abbba abca abea');
 ?>
 <br>
 <a href="#">15 задание</a><br>
-<?php
+<
  echo preg_replace('#(ab)+#', '+', 'ab abab abab abababab abea');
 ?>
 <br>
 <a href="#">16 задание</a><br>
-<?php
+<
  echo preg_replace('#a\.a#', '%', 'a.a aba aea');
 ?>
 <br>
 <a href="#">17 задание</a><br>
-<?php
+<
  echo preg_replace('#2\+3#', 'тут', '2+3 223 2223');
 ?>
 <br>
 <a href="#">18 задание</a><br>
-<?php
+<
  echo preg_replace('#2\++3#', 'тут', '23 2+3 2++3 2+++3 345 567')
 ?>
 <br>
