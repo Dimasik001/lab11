@@ -32,285 +32,215 @@
 22.	Дана строка 'aba accca azzza wwwwa'. Напишите регулярку, которая найдет все строки по краям которых стоят буквы 'a', и заменит каждую из них на '!'. Между буквами a может быть любой символ (кроме a).  <br>
 
     <br>
-1 задание
-<
-$num = range(1, 100);
-echo array_sum($num);
->
+<a href="#">1 задание</a><br>
+<?php
+if (isset($_REQUEST['city'])) {
+    $city = $_REQUEST['city'];
+    echo 'Ваш город, ' . $city;
+}
+?>
+<form action="" method="get">
+    <input type="text" name="city" placeholder="Введите город">
+    <input type="submit">
+</form>
 <br>
+
 <a href="#">2 задание</a><br>
-<
-$str = "'a','b','c','d','f'";
-$str = strtoupper($str);
-echo $str; 
->
+
+<?php
+if (isset($_REQUEST['input'])) {
+    $input = $_POST['input'];
+    $clean_input = strip_tags($input);
+}
+?>
+<form action="" method="get">
+    <input type="text" name="city" >
+    <input type="submit">
+</form>
+
 <br>
 <a href="#">3 задание</a><br>
-<
-$arr = [1, 2, 3,4,5,6,7];
-echo count($arr);
->
+<?php
+	if (empty($_GET)) {
+?>
+	<form action="" method="GET">
+		<input name="test1">
+		<input type="submit">
+	</form>
+<?php
+	} else {
+        ?>
+		<form action="" method="GET">
+		<input type="submit">
+	    </form>
+        <?php
+	}
+?>
+
+
+
 <br>
 <a href="#">4 задание</a><br>
-<
-$arr = [1, 2, 3, 4];
-echo $arr[count($arr) - 1];
->
+<?php
+if (isset($_REQUEST['name'])) {
+    $name = $_REQUEST['name'];
+    echo 'Привет, ' . $name;
+}
+?>
+<form action="" method="get">
+    <input type="text" name="name" placeholder="Введите имя">
+    <input type="submit">
+</form>
 <br>
 <a href="#">5 задание</a><br>
-<
-$arr = [1, 2, 3, 4];
-echo var_dump(in_array(2, $arr));
->
+<?php
+if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
+    $name = strip_tags($_REQUEST['name']);
+    $age = strip_tags($_REQUEST['age']);
+    $text = strip_tags($_REQUEST['text']);
+    echo 'Имя - ' . $name .'<br>' . 'Возраст - ' . $age . '<br>Сообщение: ' . $text;
+}
+?>
+<form action="" method="get">
+    <input type="text" name="name" placeholder="Введите имя">
+    <input type="text" name="age" placeholder="Введите возраст">
+    <textarea name="text" id="" cols="10" rows="2" placeholder="Введите сообщение"></textarea>
+    <input type="submit">
+</form>
 <br>
 <a href="#">6 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-echo array_sum($arr);
->
+<?php
+if (isset($_REQUEST['age'])) {
+    $age = $_REQUEST['age'];
+    echo $age;
+}
+
+if (!isset($_REQUEST['age'])):
+    ?>
+    <form action="" method="get">
+        <input name="age" placeholder="Введите ваш возраст">
+        <input type="submit">
+    </form>
+<?php endif; ?>
+
 <br>
 <a href="#">7 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-echo array_product($arr);
->
+<?php
+$loginFile = 'dimas';
+$passwordFile = 1928;
+if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
+    $login = trim($_REQUEST['login']);
+    $password = trim($_REQUEST['password']);
+    if ($login == $loginFile and $password == $passwordFile) {
+        echo 'введено верно';
+    } else {
+        echo 'неверный логин или пароль';
+    }
+}
+?>
+<form action="" method="post">
+    <input type="text" name="login" placeholder="Введите логин">
+    <input type="password" name="password" placeholder="Введите пароль">
+    <input type="submit">
+</form>
 <br>
 <a href="#">8 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-echo array_sum($arr) / count($arr);
->
+<?php
+$name = '';
+if (isset($_REQUEST['name'])) {
+    $name = $_REQUEST['name'];
+    echo $name;
+}
+?>
+<form action="" method="post">
+    <input type="text" name="name" placeholder="Введите имя" value="<?=$name;?>">
+    <input type="submit">
+</form>
 <br>
 <a href="#">9 задание</a><br>
-<
-$num = range(1, 100);
-echo print_r($num);
->
+<?php
+$message = '';
+$name = '';
+if (isset($_REQUEST['name']) and isset($_REQUEST['message'])) {
+    $name = $_REQUEST['name'];
+    $message = $_REQUEST['message'];
+    echo 'Имя- ' . $name . '<br>' . $message;
+}
+?>
+<form action="" method="post">
+    <input type="text" name="name" placeholder="Имя" value="<?=$name;?>">
+    <textarea name="message" id="" cols="10" rows="2" placeholder="сообщ"><?=$message;?></textarea>
+    <input type="submit">
+</form>
 <br>
 <a href="#">10 задание</a><br>
-<
-$az = range('a', 'z');
-echo print_r($az );
->
+<?php
+echo preg_replace('#a.b#', 'a-b', 'ahb acb aeb aeeb adcb axeb');
+?>
 <br>
 <a href="#">11 задание</a><br>
-<
-$num = range(1, 9);
-echo implode('-', $num);
->
+<?php
+echo preg_replace('#a..a#', 'a--a', 'aba aca aea abba adca abea');
+?>
 <br>
 <a href="#">12 задание</a><br>
-<
-echo array_sum(range(1, 100));
->
+<?php
+echo preg_replace('#ab.a#', '+', 'aba aca aea abba adca abea') ; 
+?>
+<br>
+<?php
+echo preg_replace('#ab+a#', '-', 'aa aba abba abbba abca abea');
+?>
 <br>
 <a href="#">13 задание</a><br>
-<
-echo array_product(range(1, 10));
->
+<?php
+ echo preg_replace('#ab*a#', '-', 'aa aba abba abbba abca abea');
+?>
 <br>
 <a href="#">14 задание</a><br>
-<
-$num = [1, 2, 3];
-$az = ['a', 'b', 'c'];
-var_dump(array_merge($num, $az));
->
+<?php
+ echo preg_replace('#ab?a#', '+', 'aa aba abba abbba abca abea');
+?>
 <br>
 <a href="#">15 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_slice($arr, 1, 3));
->
+<?php
+ echo preg_replace('#(ab)+#', '+', 'ab abab abab abababab abea');
+?>
 <br>
 <a href="#">16 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_splice($arr, 1, 2));
->
+<?php
+ echo preg_replace('#a\.a#', '%', 'a.a aba aea');
+?>
 <br>
 <a href="#">17 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_splice($arr, 1, 3));
->
+<?php
+ echo preg_replace('#2\+3#', 'тут', '2+3 223 2223');
+?>
 <br>
 <a href="#">18 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_splice($arr, 3, 0, ['a', 'b', 'c']));
->
+<?php
+ echo preg_replace('#2\++3#', 'тут', '23 2+3 2++3 2+++3 345 567')
+?>
 <br>
 <a href="#">19 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-$arr1 = array_splice($arr, 1, 0, ['a', 'b']);
-$arr2 = array_splice($arr, 6, 0, ['c']);
-$arr3 = array_splice($arr, 8, 0, ['e']);
-echo print_r($arr1+$arr2+$arr3);
+<?php
+echo preg_replace('#2\+*3#', 'тут', '23 2+3 2++3 2+++3 445 677');
 ?>
 <br>
 <a href="#">20 задание</a><br>
-<
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-$keys = array_keys($arr);
-$values = array_values($arr);
-echo print_r($keys);
-echo print_r($values);
+<?php
+echo preg_replace('#\*q+\+#', 'тут', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
 ?>
 <br>
 <a href="#">21 задание</a><br>
-<
-$arr1 = ['a', 'b', 'c'];
-$arr2 = [1, 2, 3];
-var_dump(array_combine($arr1, $arr2));
+<?php
+echo preg_replace('#\*q*\+#', 'здесь', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
 ?>
 <br>
 <a href="#">22 задание</a><br>
-<
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-var_dump(array_flip($arr));
+<?php
+echo preg_replace('#a.+?a#', '+', 'aba accca azzza wwwwa');
 ?>
-
-
-
-<br>
-<a href="#">23 задание</a><br>
-<
-var_dump(array_reverse([1, 2, 3, 4, 5]));
-?>
-<br>
-<a href="#">24 задание</a><br>
-<
-$arr =  ['a', '-', 'b', '-', 'c', '-', 'd'];
-$pos = array_search('-', $arr);
-print_r($pos);
-?>
-<br>
-<a href="#">25 задание</a><br>
-<
-$arr =  ['a', '-', 'b', '-', 'c', '-', 'd'];
-$pos = array_search('-', $arr);
-var_dump(array_splice($arr, $pos, 1));
-print_r($arr);
-?>
-
-<br>
-<a href="#">26 задание</a><br>
-<
-$arr =  ['a', 'b', 'c', 'd', 'e'];
-var_dump(array_replace($arr, [0 => '!', 3 => '!!']));
-print_r($arr);
-?>
-
-<br>
-<a href="#">27 задание</a><br>
-<
-$arr = ['3'=>'a', '1'=>'c', '2'=>'e', '4'=>'b'];
-var_dump(sort($arr)); // по возрастанию 
-var_dump(rsort($arr)); // по убыванию 
-var_dump(ksort($arr)); // по возрастанию ключей
-var_dump(krsort($arr)); // по убыванию ключей
-?>
-
-<br>
-<a href="#">28 задание</a><br>
-<
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-echo $arr[array_rand($arr)];
-?>
-
-<br>
-<a href="#">29 задание</a><br>
-<
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-echo array_rand($arr);
-?>
-
-<br>
-<a href="#">30 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-var_dump(shuffle($arr));
-print_r ($arr);
-?>
-
-<br>
-<a href="#">31 задание</a><br>
-<
-$num = range(1, 25);
-shuffle($num);
-print_r ($num);
-?>
-
-<br>
-<a href="#">32 задание</a><br>
-<
-$num = range('a', 'z');
-shuffle($num);
-print_r ($num);
-?>
-
-
-<a href="#">33 задание</a><br>
-<
-$characters = 'abcdefghijklmnopqrstuvwxyz';
-echo substr(str_shuffle($characters), 0, 6);
-
-?>
-
-<a href="#">34 задание</a><br>
-<
-$az = ['a', 'b', 'c', 'b', 'a','c'];
-$q  = var_dump(array_unique($az));
-print_r ($q);
-?>
-
-
-<a href="#">35 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-echo array_shift($arr);
-echo array_pop($arr);
-?>
-<br>
-<a href="#">36 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5];
-array_unshift($arr,0);
-array_push($arr, 6);
-print_r ($arr);
-?>
-<br>
-<a href="#">37 задание</a><br>
-<
-$arr = [1, 2, 3, 4, 5, 6, 7, 8];
-$str = '';
-while (!empty($arr)) {
-    $str .= array_shift($arr);
-    $str .= array_pop($arr);
-}
-echo $str;
-?>
-<br>
-<a href="#">38 задание</a><br>
-<
-$arr = ['a', 'b', 'c'];
-$new = array_pad($arr, 6, '-');
-print_r ($new);
-?>
-<br>
-<a href="#">39 задание</a><br>
-<
-$arr = array_fill(0, 10, 'x');
-print_r ($arr);
-?>
-<br>
-<a href="#">40 задание</a><br>
-<
-$arr = range(1, 20);
-$arr = array_chunk($arr, 4);
-print_r ($arr);
->
 
 
 
