@@ -90,216 +90,247 @@ R 6350 км, определить расстояние до линии гори�
 
 
     <br>
-<a href="#">1 задание</a><br>
-<
-if (isset($_REQUEST['city'])) {
-    $city = $_REQUEST['city'];
-    echo 'Ваш город, ' . $city;
+ <h2>Задание 1</h2>
+  <p><script>
+    let name = "Ilya";
+document.writeln( `hello ${1}`+ "<br>" ); // hello 1
+document.writeln( `hello ${"name"}` + "<br>"); // hello name
+document.writeln( `hello ${name}`+ "<br>" ); // hello Ilya
+</script></p>
+
+
+<h2>Задание 2</h2>
+  <p> <script>
+    let names = prompt("Ваше имя?", "");
+    document.writeln(names);
+  </script></p>
+
+
+
+<h2>Задание 3</h2>
+  <p> <script>
+    let a = 1, b = 1;
+let c = ++a; 
+let d = b++; 
+document.writeln(a+","+b+","+c+","+d);
+  </script></p>
+
+<h2>Задание 4</h2>
+<p> <script>
+let aa = 2;
+let x = 1 + (aa *= 2);
+document.writeln(aa+","+x);
+</script></p>
+
+
+<h2>Задание 5</h2>
+<p> <script>
+document.writeln("" + 1 + 0)
+document.writeln("" - 1 + 0)
+document.writeln(true + false)
+document.writeln(6 / "3")
+document.writeln("2" * "3")
+document.writeln(4 + 5 + "px")
+document.writeln("$" + 4 + 5)
+document.writeln("4" - 2)
+document.writeln("4px" - 2)
+document.writeln(7 / 0)
+document.writeln("  -9  " + 5)
+document.writeln("  -9  " - 5)
+document.writeln(null + 1)
+document.writeln(undefined + 1)
+document.writeln(" \t \n" - 2)
+</script></p>
+
+<h2>Задание 6</h2>
+<p> <script>
+let aaa = ("Первое число?", 1);
+let bbb = ("Второе число?", 2);
+document.writeln(aaa + bbb);
+</script></p>
+
+
+<h2>Задание 7</h2>
+<p> <script>
+var pi = Math.PI.toFixed(2);
+document.writeln(pi); 
+</script></p>
+
+
+<h2>Задание 8</h2>
+<p> <script>
+var number = ("Введите число:",2); //prompt("Введите число:");
+document.writeln("Вы ввели число: " + number);
+</script></p>
+
+<h2>Задание 9</h2>
+<p> <script>
+var numbers = ("Введите число:",32);
+document.writeln("- вот какое число Вы ввели: " + numbers);
+</script></p>
+
+<h2>Задание 10</h2>
+<p> <script>
+var hislo = ("сторона квадрата:",3);
+document.writeln("периметр:"+hislo*4);
+</script></p>
+
+<h2>Задание 11</h2>
+<p> <script>
+var hisslo = ("сторона квадрата:",3);
+document.writeln("диаметр:"+hisslo*2);
+</script></p>
+
+<h2>Задание 12</h2>
+<p> <script>
+let radius = 6350; // радиус Земли в километрах
+let height = 10; // высота над Землей в километрах
+let rast = Math.sqrt((2 * radius * height) + (height * height));
+document.writeln("Расстояние до линии горизонта:", rast, "километров");
+</script></p>
+
+<h2>Задание 13</h2>
+<p> <script>
+function vihislitCube(length) {
+  let obiem = length ** 3; // объем куба
+  let ploshad = 6 * (length ** 2); // площадь его боковой поверхности
+  return {
+    obiem: obiem,
+    ploshad: ploshad
+  };
 }
->
-<form action="" method="get">
-    <input type="text" name="city" placeholder="Введите город">
-    <input type="submit">
-</form>
+let length = 5; // длина ребра куба
+let cube = vihislitCube(length);
+document.writeln("Объем куба:", cube.obiem);
+document.writeln("Площадь его боковой поверхности:", cube.ploshad);
+</script></p>
+
+<h2>Задание 14</h2>
+<p> <script>
+
+let rradius = ("Введите радиус окружности:", 3);
+
+// длина окружностb
+let dlina = 2 * Math.PI * rradius;
+
+// Вычисление площади круга
+let area = Math.PI * Math.pow(rradius, 2);
+
+// Вывод результатов
+document.writeln("Длина окружности:", dlina.toFixed(2));
+document.writeln("Площадь круга:", area.toFixed(2));
+</script></p>
 
 
-<a href="#">2 задание</a><br>
+<h2>Задание 15</h2>
+<p> <script>
+var hislo1 = ("Число 1",4);
+    var hislo2 = (" 2 число",33);
+    hislo1 = hislo1+hislo2;
+    hislo2 = hislo1-hislo2;
+    hislo1 = hislo1-hislo2;
+  document.writeln(hislo1,hislo2)
+</script></p>
 
-<
-if (isset($_REQUEST['input'])) {
-    $input = $_POST['input'];
-    $clean_input = strip_tags($input);
-}
->
-<form action="" method="get">
-    <input type="text" name="city" >
-    <input type="submit">
-</form>
+<h2>Задание 16</h2>
+<p> <script>
+let hisslo1 = ("Число 1",4);
+let hisslo2 = (" 2 число",33);
+  let  sa=(hisslo1*hisslo1+hisslo2*hisslo2)/2; //среднее арифметич 
+  let  sg=Math.sqrt(Math.abs(hisslo1)*Math.abs(hisslo2)); //средн. геометрич
+  document.writeln("среднее арифметич"+sa+"<br>"+"среднее геометр"+sg)
+</script></p>
 
-
-<a href="#">3 задание</a><br>
-<
-	if (empty($_GET)) {
->
-	<form action="" method="GET">
-		<input name="test1">
-		<input type="submit">
-	</form>
-<
-	} else {
-        ?>
-		<form action="" method="GET">
-		<input type="submit">
-	    </form>
-        <?php
-	}
-?>
+<h2>Задание 17</h2>
+<p> <script>
+let obem = ("Введите объем тела:",10);
+let mass = ("Введите массу тела:",4);
+// плотности 
+let density = mass / obem;
+document.writeln("Плотность материала тела: " + density);
+</script></p>
 
 
-
-
-<a href="#">4 задание</a><br>
-<
-if (isset($_REQUEST['name'])) {
-    $name = $_REQUEST['name'];
-    echo 'Привет, ' . $name;
-}
-?>
-<form action="" method="get">
-    <input type="text" name="name" placeholder="Введите имя">
-    <input type="submit">
-</form>
-<br>
-<a href="#">5 задание</a><br>
-<
-if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
-    $name = strip_tags($_REQUEST['name']);
-    $age = strip_tags($_REQUEST['age']);
-    $text = strip_tags($_REQUEST['text']);
-    echo 'Имя - ' . $name .'<br>' . 'Возраст - ' . $age . '<br>Сообщение: ' . $text;
-}
-?>
-<form action="" method="get">
-    <input type="text" name="name" placeholder="Введите имя">
-    <input type="text" name="age" placeholder="Введите возраст">
-    <textarea name="text" id="" cols="10" rows="2" placeholder="Введите сообщение"></textarea>
-    <input type="submit">
-</form>
-<br>
-<a href="#">6 задание</a><br>
-<
-if (isset($_REQUEST['age'])) {
-    $age = $_REQUEST['age'];
-    echo $age;
+<h2>Задание 18</h2>
+<p> <script>
+// Функция для определения плотности населения
+function populacia(population, ploshadi) {
+return population / ploshadi;
 }
 
-if (!isset($_REQUEST['age'])):
-    ?>
-    <form action="" method="get">
-        <input name="age" placeholder="Введите ваш возраст">
-        <input type="submit">
-    </form>
-<?php endif; ?>
+let population = 100; // количество жителей
+let ploshadi = 5; // площадь
+let hh = populacia(population, ploshadi);
+document.writeln("Плотность населения составляет  " + hh  + "чел/км²");
+</script></p>
 
 
-<a href="#">7 задание</a><br>
-<
-$loginFile = 'dimas';
-$passwordFile = 1928;
-if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
-    $login = trim($_REQUEST['login']);
-    $password = trim($_REQUEST['password']);
-    if ($login == $loginFile and $password == $passwordFile) {
-        echo 'введено верно';
-    } else {
-        echo 'неверный логин или пароль';
+<h2>Задание 19</h2>
+<p> <script>
+let cathetus1 = ("Введите длину первого катета: ",3);
+let cathetus2 = ("Введите длину второго катета: ",6);
+//  гипотенузf
+let hypotenuse = Math.sqrt(cathetus1 ** 2 + cathetus2 ** 2);
+document.writeln("Гипотенуза треугольника равна " + hypotenuse);
+</script></p>
+
+
+<h2>Задание 20</h2>
+<p> <script>
+function calculateRingArea(vnehRadius, vnutrRadius) {
+
+
+  //  площади кругов
+  let vneshPloshad = Math.PI * Math.pow(vnehRadius, 2);
+ let vnutrPoshad = Math.PI * Math.pow(vnutrRadius, 2);
+
+  //  площадь кольца
+  let ploshadcolca = vneshPloshad - vnutrPoshad;
+
+  return ploshadcolca;
+}
+let vnehRadius = 8;
+let vnutrRadius = 5;
+let zz = calculateRingArea(vnehRadius, vnutrRadius)
+document.writeln('Площадь кольца:', zz);
+</script></p>
+
+
+<h2>Задание 21</h2>
+<p> <script>
+    function findPerimeter(cathet1, cathet2) {
+//  гипотенузу 
+let hypotenus = Math.sqrt(cathetus1 ** 2 + cathetus2 ** 2);
+
+// периметр
+let perimeter = cathet1 + cathet2 + hypotenus;
+return perimeter;
     }
-}
-?>
-<form action="" method="post">
-    <input type="text" name="login" placeholder="Введите логин">
-    <input type="password" name="password" placeholder="Введите пароль">
-    <input type="submit">
-</form>
-<br>
-<a href="#">8 задание</a><br>
-<
-$name = '';
-if (isset($_REQUEST['name'])) {
-    $name = $_REQUEST['name'];
-    echo $name;
-}
-?>
-<form action="" method="post">
-    <input type="text" name="name" placeholder="Введите имя" value="<?=$name;?>">
-    <input type="submit">
-</form>
-<br>
-<a href="#">9 задание</a><br>
-<
-$message = '';
-$name = '';
-if (isset($_REQUEST['name']) and isset($_REQUEST['message'])) {
-    $name = $_REQUEST['name'];
-    $message = $_REQUEST['message'];
-    echo 'Имя- ' . $name . '<br>' . $message;
-}
-?>
-<form action="" method="post">
-    <input type="text" name="name" placeholder="Имя" value="<?=$name;?>">
-    <textarea name="message" id="" cols="10" rows="2" placeholder="сообщ"><?=$message;?></textarea>
-    <input type="submit">
-</form>
-<br>
-<a href="#">10 задание</a><br>
-<
-echo preg_replace('#a.b#', 'a-b', 'ahb acb aeb aeeb adcb axeb');
-?>
-<br>
-<a href="#">11 задание</a><br>
-<
-echo preg_replace('#a..a#', 'a--a', 'aba aca aea abba adca abea');
-?>
-<br>
-<a href="#">12 задание</a><br>
-<
-echo preg_replace('#ab.a#', '+', 'aba aca aea abba adca abea') ; 
-?>
-<br>
-<
-echo preg_replace('#ab+a#', '-', 'aa aba abba abbba abca abea');
-?>
-<br>
-<a href="#">13 задание</a><br>
-<
- echo preg_replace('#ab*a#', '-', 'aa aba abba abbba abca abea');
-?>
-<br>
-<a href="#">14 задание</a><br>
-<
- echo preg_replace('#ab?a#', '+', 'aa aba abba abbba abca abea');
-?>
-<br>
-<a href="#">15 задание</a><br>
-<
- echo preg_replace('#(ab)+#', '+', 'ab abab abab abababab abea');
-?>
-<br>
-<a href="#">16 задание</a><br>
-<
- echo preg_replace('#a\.a#', '%', 'a.a aba aea');
-?>
-<br>
-<a href="#">17 задание</a><br>
-<
- echo preg_replace('#2\+3#', 'тут', '2+3 223 2223');
-?>
-<br>
-<a href="#">18 задание</a><br>
-<
- echo preg_replace('#2\++3#', 'тут', '23 2+3 2++3 2+++3 345 567')
-?>
-<br>
-<a href="#">19 задание</a><br>
-<
-echo preg_replace('#2\+*3#', 'тут', '23 2+3 2++3 2+++3 445 677');
-?>
-<br>
-<a href="#">20 задание</a><br>
-<
-echo preg_replace('#\*q+\+#', 'тут', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
-?>
-<br>
-<a href="#">21 задание</a><br>
-<
-echo preg_replace('#\*q*\+#', 'здесь', '*+ *q+ *qq+ *qqq+ *qqq qqq+');
-?>
-<br>
-<a href="#">22 задание</a><br>
-<
-echo preg_replace('#a.+?a#', '+', 'aba accca azzza wwwwa');
-?>
+let cathet1 = 31; 
+let cathet2 = 4; 
 
+let j = findPerimeter(cathet1, cathet2);
+document.writeln("Периметр треугольника:", j);
+</script></p>
+
+
+<h2>Задание 22</h2>
+<p> <script>
+  function calculatePerimeter(osn1, osn2, visota) {
+  //  сторона боковой стороны трапеции
+  let X = Math.sqrt(Math.pow((osn1 - osn2) / 2, 2) + Math.pow(visota, 2));
+  //  периметр трапеции
+  let perimeter = osn1 + osn2 + (2 * X);
+  
+  return perimeter;
+}
+let osn1 = 10; //  основания
+let osn2 = 8; //  основания
+let visota = 5; // высота
+let result = calculatePerimeter(osn1, osn2, visota);
+document.writeln("Периметр равнобедренной трапеции:", result);
+
+</script></p>
 
 
  <div class="heading">
